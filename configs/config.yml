@@ -1,6 +1,6 @@
 # DATASET CONFIG
 
-data_path: /home/matt/SynologyDrive/Code/ProtoVQ-VAE/data/
+data_path: /absolute/path/to/data/
 dataset: lfm2b-1mon
 
 # Example:
@@ -9,9 +9,6 @@ dataset: lfm2b-1mon
 
 # Based on the above example, the data file needs to be located here:
 # /home/your_user/code/ProtoVQ-VAE/data/lfm2b-1mon/lfm2b-1mon.inter
-
-# GOOGLE COLAB ONLY:
-#data_path: /content/drive/MyDrive/Colab Notebooks/data/protovq-vae/atomic/
 
 USER_ID_FIELD: user_id
 ITEM_ID_FIELD: item_id
@@ -48,7 +45,7 @@ topk: 10
 valid_metric: MRR@10
 metric_decimal_place: 4
 show_progress: True
-log_wandb: True
+log_wandb: False
 wandb_project: protovq-vae
 
 eval_args:
