@@ -1,0 +1,17 @@
+name: protovqvae
+channels:
+  - aibox
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - recbole=1.1.1
+  - jupyter
+  - notebook
+  - pytorch
+  - scipy
+  - matplotlib
+  - seaborn
+  - wandb
+  - tensorboard
+  - numpy

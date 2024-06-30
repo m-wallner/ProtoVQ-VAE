@@ -1,7 +1,16 @@
-# dataset config : General Recommendation
-data_path: /home/matt/SynologyDrive/Code/ProtoVQ-VAE/data/
+# DATASET CONFIG
 
-# Google Colab only:
+data_path: /home/matt/SynologyDrive/Code/ProtoVQ-VAE/data/
+dataset: lfm2b-1mon
+
+# Example:
+# data_path: /home/your_user/code/ProtoVQ-VAE/data/
+# dataset: lfm2b-1mon
+
+# Based on the above example, the data file needs to be located here:
+# /home/your_user/code/ProtoVQ-VAE/data/lfm2b-1mon/lfm2b-1mon.inter
+
+# GOOGLE COLAB ONLY:
 #data_path: /content/drive/MyDrive/Colab Notebooks/data/protovq-vae/atomic/
 
 USER_ID_FIELD: user_id
@@ -9,7 +18,7 @@ ITEM_ID_FIELD: item_id
 seed: 2024
 reproducibility: True
 
-# Model config
+# MODEL CONFIG
 mlp_hidden_size: [512, 128]
 proto_dim: 64
 drop_out: 0.20
@@ -21,7 +30,7 @@ commitment_cost: 0.25
 #anneal_cap: 0.2
 #total_anneal_steps: 200000
 
-# Training and evaluation config
+# TRAINING AND EVALUATION CONFIG
 worker: 8
 learner: adam
 learning_rate: 0.001
