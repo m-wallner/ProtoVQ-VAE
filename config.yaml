@@ -32,7 +32,7 @@ train_batch_size: 2048
 eval_batch_size: 2048
 eval_step: 10
 stopping_step: 10
-split: {'RS': [0.9,0.05,0.05]}
+split: {'RS': [0.8,0.1,0.1]}
 mode: full
 metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision']
 topk: 10
