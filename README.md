@@ -20,8 +20,7 @@ this architecture to work with sparse data.
 ├── data
 │   ├── lfm2b-1mon
 │   │   ├── lfm2b-1mon.inter
-├── utilities
-│   ├── data_exploration_preprocessing.ipynb
+├── data_exploration_preprocessing.ipynb
 ├── protovqvae.yml
 ├── protovq_vae_recbole.ipynb
 ├── README.md
@@ -32,7 +31,7 @@ this architecture to work with sparse data.
 - `protovq_vae_recbole.ipynb`: Main notebook containing the RecBole implementation of ProtoVQ-VAE.
 - `configs/config.yaml`: RecBole configuration file
 - `data/lfm2b-1mon/lfm2b-1mon.inter`: Dataset file in RecBole .inter format
-- `utilities/data_exploration_preprocessing.ipynb`: Mixture of data exploration and data preprocessing - outputs .inter file.
+- `data_exploration_preprocessing.ipynb`: Mixture of data exploration and data preprocessing - outputs .inter file.
 
 ### Installation and Configuration
 #### Environment
