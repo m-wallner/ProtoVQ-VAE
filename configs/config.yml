@@ -1,0 +1,66 @@
+# DATASET CONFIG
+
+data_path: /home/matt/SynologyDrive/Code/ProtoVQ-VAE/data/
+dataset: lfm2b-1mon
+
+# Example:
+# data_path: /home/your_user/code/ProtoVQ-VAE/data/
+# dataset: lfm2b-1mon
+
+# Based on the above example, the data file needs to be located here:
+# /home/your_user/code/ProtoVQ-VAE/data/lfm2b-1mon/lfm2b-1mon.inter
+
+# GOOGLE COLAB ONLY:
+#data_path: /content/drive/MyDrive/Colab Notebooks/data/protovq-vae/atomic/
+
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+seed: 2024
+reproducibility: True
+
+# MODEL CONFIG
+mlp_hidden_size: [512, 128]
+proto_dim: 64
+drop_out: 0.20
+n_proto: 100
+topk_proto: 10
+commitment_cost: 0.25
+#embedding_size: 120
+#latent_split: 1
+#anneal_cap: 0.2
+#total_anneal_steps: 200000
+
+# TRAINING AND EVALUATION CONFIG
+worker: 8
+learner: adam
+learning_rate: 0.001
+train_neg_sample_num: 1
+train_neg_sample_distribution: uniform
+epochs: 3000
+train_batch_size: 2048
+eval_batch_size: 2048
+eval_step: 10
+stopping_step: 10
+split: {'RS': [0.8,0.1,0.1]}
+mode: full
+metrics: ['Recall', 'MRR', 'NDCG', 'Hit', 'Precision']
+topk: 10
+valid_metric: MRR@10
+metric_decimal_place: 4
+show_progress: True
+log_wandb: True
+wandb_project: protovq-vae
+
+eval_args:
+#  group_by: user
+#  order: RO
+  split: {'RS': [0.9,0.05,0.05]}
+#  mode: full
+
+
+#train_neg_sample_args:
+#    distribution: uniform
+#    sample_num: 1
+#    alpha: 1.0
+#    dynamic: False
+#    candidate_num: 0
