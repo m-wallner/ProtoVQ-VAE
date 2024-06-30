@@ -1,0 +1,8 @@
+matplotlib=3.8.4
+numpy=1.26.4
+pandas=2.2.1
+python=3.9.19
+pytorch=1.13.1
+pytorch-cuda=11.6
+recbole=1.1.1
+tqdm=4.66.4
